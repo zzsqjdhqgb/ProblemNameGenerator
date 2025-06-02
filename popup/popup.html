@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .header {
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .plugin-list {
+      margin-bottom: 16px;
+    }
+    .plugin-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .plugin-name {
+      margin-right: 8px;
+    }
+    .settings-link {
+      display: block;
+      text-align: center;
+      padding: 8px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .settings-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">OJ Problem Name Copier</div>
+  <div class="plugin-list" id="pluginList">
+    <!-- Plugins will be listed here -->
+  </div>
+  <a href="/options/options.html" class="settings-link" target="_blank">插件管理</a>
+  <script src="popup.js"></script>
+</body>
+</html>

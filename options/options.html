@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OJ Problem Name Copier - 设置</title>
+  <style>
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .header {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .plugin-list {
+      list-style: none;
+      padding: 0;
+    }
+    .plugin-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #eee;
+      margin-bottom: 8px;
+      border-radius: 4px;
+    }
+    .plugin-info {
+      flex: 1;
+      margin-right: 16px;
+    }
+    .plugin-name {
+      font-weight: bold;
+    }
+    .plugin-meta {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+    .plugin-controls {
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #f5f5f5;
+    }
+    .btn-primary {
+      background: #4e6ef2;
+      border-color: #4e6ef2;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #405acc;
+    }
+    .format-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>OJ Problem Name Copier 设置</h1>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">插件管理</h2>
+    <ul class="plugin-list" id="pluginList">
+      <!-- 插件列表将通过 JavaScript 动态生成 -->
+    </ul>
+    <button class="btn btn-primary" id="addPlugin">添加新插件</button>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">格式化选项</h2>
+    <div class="format-options">
+      <label>
+        <input type="checkbox" id="includeProblemId">
+        包含题目编号
+      </label>
+      <label>
+        <input type="checkbox" id="convertSpecialChars">
+        转换特殊字符
+      </label>
+    </div>
+  </div>
+
+  <script src="options.js" type="module"></script>
+</body>
+</html>

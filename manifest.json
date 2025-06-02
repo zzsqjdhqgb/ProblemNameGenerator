@@ -1,0 +1,27 @@
+{  "manifest_version": 3,
+  "name": "OJ Problem Name Copier",
+  "version": "1.0.0",
+  "description": "Copy problem names from popular Online Judge platforms",  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["core/*.js", "plugins/*.js"],
+    "matches": ["*://*/*"]
+  }],  "action": {
+    "default_popup": "/popup/popup.html"
+  },
+  "options_page": "/options/options.html",
+  "background": {
+    "service_worker": "core/background.js",
+    "type": "module"
+  },  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["core/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
